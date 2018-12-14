@@ -23,4 +23,6 @@ geom_histogram(aes(x, ..density..), binwidth = 1, colour = "black",
    ylab("Density")
 ```
 
+![Histogram of Old Faithful](faithful.png)
+
 This package is the first iteration of a broader project that will eventually include several other plotting and fitting tools for Gaussian mixture models and the Expectation-Maximization (EM) algorithm.
