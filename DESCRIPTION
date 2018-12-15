@@ -2,8 +2,8 @@ Package: plotGMM
 Type: Package
 Title: Custom Function to Plot Components from a Gaussian Mixture Model
 Version: 0.1.0
-Authors@R: c(person("Fong", "Chan", role = c("aut", "cre"), email = "fongchun@alumni.ubc.ca"),
-             person("Philip", "Waggoner", role = "aut"))
+Authors@R: c(person("Philip", "Waggoner", role = c("aut", "cre"), email = "pdwaggoner@wm.edu"),
+             person("Fong", "Chan", role = "aut"))
 Maintainer: Philip Waggoner <pdwaggoner@wm.edu>
 Description: Custom function to be used in plotting components from a Gaussian mixture model. Usage most often will be specifying the "fun" argument 
     within "stat_function" in a ggplot2 object.
