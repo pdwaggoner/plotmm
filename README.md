@@ -2,6 +2,7 @@
 
 [![Downloads](http://cranlogs.r-pkg.org/badges/grand-total/plotGMM)](http://cranlogs.r-pkg.org/)
 [![CRAN RStudio mirror downloads](http://cranlogs.r-pkg.org/badges/plotGMM)](http://www.r-pkg.org/pkg/plotGMM)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=plastic)](https://github.com/pdwaggoner/plotGMM/pulls)
 
 In collaboration with Fong Chun Chan (@tinyheero), `plotGMM` provides a custom function, `plot_mix_comps`, for users interested in overlaying the components from a Gaussian mixture model. This allows for clean, precise plotting constraints, including mean (`mu`), variance (`sigma`), and mixture weight (`lambda`) of the components. Specifically, the function superimposes the shape of the components over a `ggplot2` object. We demonstrate this both in the example in the package documentation, as well as below.
 
