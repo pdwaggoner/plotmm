@@ -1,4 +1,5 @@
-# `plotGMM`
+# `plotGMM` An R Package for plotting components from Gaussian mixture models
+
 [![Downloads](http://cranlogs.r-pkg.org/badges/grand-total/plotGMM)](http://cranlogs.r-pkg.org/)
 [![CRAN RStudio mirror downloads](http://cranlogs.r-pkg.org/badges/plotGMM)](http://www.r-pkg.org/pkg/plotGMM)
 
