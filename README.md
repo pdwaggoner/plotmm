@@ -10,6 +10,7 @@ In collaboration with Fong Chun Chan (@tinyheero), `plotGMM` provides a custom f
 library(magrittr)
 library(ggplot2)
 library(mixtools)
+library(plotGMM)
 
 # Fit a GMM using EM
 set.seed(1)
