@@ -1,18 +1,30 @@
-# `plotGMM` An R Package for plotting components from Gaussian mixture models
-[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/plotGMM)](http://cran.r-project.org/package=plotGMM)
-[![Downloads](http://cranlogs.r-pkg.org/badges/grand-total/plotGMM)](http://cranlogs.r-pkg.org/)
+# `plotGMM` Tools for Visualizing Gaussian Mixture Models
+Old version: [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/plotGMM)](http://cran.r-project.org/package=plotGMM)
+Old version: [![Downloads](http://cranlogs.r-pkg.org/badges/grand-total/plotGMM)](http://cranlogs.r-pkg.org/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=plastic)](https://github.com/pdwaggoner/plotGMM/pulls)
 
-In collaboration with Fong Chun Chan (@tinyheero), `plotGMM` provides a custom function, `plot_mix_comps`, for users interested in overlaying the components from a Gaussian mixture model. This allows for clean, precise plotting constraints, including mean (`mu`), variance (`sigma`), and mixture weight (`lambda`) of the components. Specifically, the function superimposes the shape of the components over a `ggplot2` object. We demonstrate this both in the example in the package documentation, as well as below.
+In collaboration with Fong Chun Chan [@tinyheero](https://github.com/tinyheero), the latest relaese (v 0.2.0) of `plotGMM` provides two main functions: 
 
+1. `plot_GMM`: The main function of the packcage, `plot_GMM` allows the user to simply input the name of a `mixEM` object (from fitting a Gaussian mixture model (GMM) via the `normalmixEM` function from the `mixtools` package), as well as the number of components, `k`, that were used in the original GMM fit. The result is a clean `ggplot2` object showing the density of the data with overlaid mixture weight component curves.  
+
+2. `plot_mix_comps`: A custom function for users interested in overlaying the components from a Gaussian mixture model. This allows for clean, precise plotting constraints, including mean (`mu`), variance (`sigma`), and mixture weight (`lambda`) of the components. The function superimposes the shape of the components over a `ggplot2` object. Importantly, while the `plot_mix_comps` function is used in the main `plot_GMM` function, users can use the `plot_mix_comps` function in their own custom plots. To do so, see the second example below. 
+
+### For plotting GMMs using `plot_GMM`
 ```{r }
+mixmdl <- mixtools::normalmixEM(faithful$waiting, k = 2)
+
+plot_GMM(mixmdl, 2)
+```
+
+### Manually using the `plot_mix_comps` function in a custom `ggplot2` plot
+```{r }
+library(plotGMM)
 library(magrittr)
 library(ggplot2)
 library(mixtools)
-library(plotGMM)
 
 # Fit a GMM using EM
-set.seed(1)
+set.seed(576)
 mixmdl <- normalmixEM(faithful$waiting, k = 2)
 
 # Plot mixture components using the `plot_mix_comps` function
@@ -28,7 +40,3 @@ geom_histogram(aes(x, ..density..), binwidth = 1, colour = "black",
                  colour = "blue", lwd = 1.5) +
    ylab("Density")
 ```
-
-![Histogram of Old Faithful](faithful.png)
-
-This package is the first iteration of a broader project that will eventually include several other plotting and fitting tools for Gaussian mixture models and the Expectation-Maximization (EM) algorithm.
