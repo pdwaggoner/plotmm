@@ -15,7 +15,7 @@ In collaboration with Fong Chan [@tinyheero](https://github.com/tinyheero), the 
 ```{r }
 # Fit a GMM using EM
 set.seed(576)
-mixmdl <- mixtools::normalmixEM(faithful$waiting, k = 2)
+mixmdl <- mixtools::normalmixEM(iris$Petal.Length, k = 2)
 
 # Plot the density with overlaid mixture weight curves
 plot_GMM(mixmdl, 2)
@@ -33,6 +33,7 @@ plot_cut_point(mixmdl, plot = TRUE) # produces plot
 # Option 2: No plot
 plot_cut_point(mixmdl, plot = FALSE) # produces only numeric summary output from GMM
 ```
+![Iris GMM Plot using `plot_GMM`](iris.png)
 
 ### Use `plot_mix_comps` for manually creating a custom `ggplot2` plot
 ```{r }
