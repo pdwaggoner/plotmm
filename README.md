@@ -57,8 +57,7 @@ geom_histogram(aes(x, ..density..), binwidth = 1, colour = "black",
                  colour = "red", lwd = 1.5) +
    stat_function(geom = "line", fun = plot_mix_comps,
                  args = list(mixmdl$mu[2], mixmdl$sigma[2], lam = mixmdl$lambda[2]),
-                 colour = "blue", lwd = 1.5) +
-   ylab("Density")
+                 colour = "blue", lwd = 1.5)
 ```
 
 ![Custom Plot using `plot_mix_comps`](faithful.png)
