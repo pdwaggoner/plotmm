@@ -1,0 +1,5 @@
+importFrom("stats", "dnorm")
+exportPattern("^[[:alpha:]]+")
+export(plot_cut_point)
+export(plot_GMM)
+export(plot_mix_comps)
