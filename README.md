@@ -13,6 +13,8 @@ In collaboration with Fong Chan [@tinyheero](https://github.com/tinyheero), the 
 
 ### Plotting GMMs using `plot_GMM`
 ```{r }
+# Fit a GMM using EM
+set.seed(576)
 mixmdl <- mixtools::normalmixEM(faithful$waiting, k = 2)
 
 plot_GMM(mixmdl, 2)
@@ -20,6 +22,8 @@ plot_GMM(mixmdl, 2)
 
 ### Plotting Cut Points from GMMs using `plot_cut_point`
 ```{r }
+# Fit a GMM using EM
+set.seed(576)
 mixmdl <- mixtools::normalmixEM(faithful$waiting, k = 2)
 
 plot_cut_point(mixmdl, plot = TRUE) # produces plot
