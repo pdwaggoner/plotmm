@@ -21,7 +21,7 @@ mixmdl <- mixtools::normalmixEM(faithful$waiting, k = 2)
 plot_GMM(mixmdl, 2)
 ```
 
-### Plotting Cut Points from GMMs using `plot_cut_point`
+### Plotting cut points from GMMs using `plot_cut_point`
 ```{r }
 # Fit a GMM using EM
 set.seed(576)
@@ -34,7 +34,7 @@ plot_cut_point(mixmdl, plot = TRUE) # produces plot
 plot_cut_point(mixmdl, plot = FALSE) # produces only numeric summary output from GMM
 ```
 
-### Manually using `plot_mix_comps` for a custom `ggplot2` plot
+### Use `plot_mix_comps` for manually creating a custom `ggplot2` plot
 ```{r }
 library(plotGMM)
 library(magrittr)
