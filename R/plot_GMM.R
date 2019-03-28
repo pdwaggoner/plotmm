@@ -1,26 +1,38 @@
-#' Plots Components from Gaussian Mixture Models
+#'Plots Components from Gaussian Mixture Models
 #'
-#' Generates a plot of densities with overlaid components from a Gaussian mixture model (GMM)
-#' @usage plot_GMM(m, k=NULL)
-#' @param m a \code{mixEM} class object corresponding with the fit GMM
-#' @param k the number of components specified in the GMM, \code{m}
-#' @details Uses ggplot2 graphics to plot data densities with overlaid components from \code{mixEM} objects, which are GMM's fit using the \code{mixtools} package.
+#'Generates a plot of densities with overlaid components from a Gaussian mixture model (GMM)
+#'@usage plot_GMM(m, k=NULL)
+#'@param m a \code{mixEM} class object corresponding with the fit GMM
+#'@param k the number of components specified in the GMM, \code{m}
+#'@details Uses ggplot2 graphics to plot data densities with overlaid components from \code{mixEM} objects, which are GMM's fit using the \code{mixtools} package.
 #'
-#' Note: Users must enter the same component value, \code{k}, in the \code{plot_GMM} function, as that which was specified in the original GMM specification.
-#' @examples
-#' set.seed(235)
+#'Note: Users must enter the same component value, \code{k}, in the \code{plot_GMM} function, as that which was specified in the original GMM specification.
+#'@examples
+#'set.seed(235)
 #'mixmdl <- mixtools::normalmixEM(faithful$waiting, k = 2)
 #'
 #'plot_GMM(mixmdl, 2)
-#' @method mixtools mixEM
-#' @export
+#'@method mixtools mixEM
+#'@export
 
 plot_GMM <- function(m, k=NULL) {
+  if (!requireNamespace("ggplot2", quietly = TRUE)) {
+    stop("Package \"ggplot2\" needed for this function to work. Please install it.",
+         call. = FALSE)
+  }
+  if (!requireNamespace("mixtools", quietly = TRUE)) {
+    stop("Package \"mixtools\" needed for this function to work. Please install it.",
+         call. = FALSE)
+  }
+  if (!requireNamespace("methods", quietly = TRUE)) {
+    stop("Package \"methods\" needed for this function to work. Please install it.",
+         call. = FALSE)
+  }
   m <- try(methods::as(m, "mixEM", strict=TRUE))
   x <- m$x
   x <- data.frame(x)
   if (k <= 1){
-    stop("Specified components must be at least length 2")
+    stop("Specified components must be at least length 2.")
   }
   if (k == 2){
     ggplot2::ggplot(data.frame(x)) +
