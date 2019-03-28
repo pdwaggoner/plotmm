@@ -11,6 +11,7 @@ In collaboration with Fong Chun Chan [@tinyheero](https://github.com/tinyheero),
 
 ### For plotting GMMs using `plot_GMM`
 ```{r }
+set.seed(2478)
 mixmdl <- mixtools::normalmixEM(faithful$waiting, k = 2)
 
 plot_GMM(mixmdl, 2)
