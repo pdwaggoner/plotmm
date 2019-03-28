@@ -20,7 +20,7 @@ mixmdl <- mixtools::normalmixEM(iris$Petal.Length, k = 2)
 # Plot the density with overlaid mixture weight curves
 plot_GMM(mixmdl, 2)
 ```
-![Iris GMM Plot using `plot_GMM`](iris.png){:height="36px" width="36px"}
+![Iris GMM Plot using `plot_GMM`](iris.png)
 
 ### Plotting cut points from GMMs using `plot_cut_point`
 ```{r }
