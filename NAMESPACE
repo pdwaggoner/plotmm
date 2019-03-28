@@ -1,3 +1,0 @@
-importFrom("stats", "dnorm")
-exportPattern("^[[:alpha:]]+")
-export(plot_mix_comps)
