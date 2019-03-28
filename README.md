@@ -58,3 +58,5 @@ geom_histogram(aes(x, ..density..), binwidth = 1, colour = "black",
                  colour = "blue", lwd = 1.5) +
    ylab("Density")
 ```
+
+![Custom Plot using `plot_mix_comps`](faithful.png)
