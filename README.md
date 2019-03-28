@@ -17,6 +17,7 @@ In collaboration with Fong Chan [@tinyheero](https://github.com/tinyheero), the 
 set.seed(576)
 mixmdl <- mixtools::normalmixEM(faithful$waiting, k = 2)
 
+# Plot the density with overlaid mixture weight curves
 plot_GMM(mixmdl, 2)
 ```
 
@@ -26,12 +27,14 @@ plot_GMM(mixmdl, 2)
 set.seed(576)
 mixmdl <- mixtools::normalmixEM(faithful$waiting, k = 2)
 
+# Option 1: Plot
 plot_cut_point(mixmdl, plot = TRUE) # produces plot
 
+# Option 2: No plot
 plot_cut_point(mixmdl, plot = FALSE) # produces only numeric summary output from GMM
 ```
 
-### Manually using the `plot_mix_comps` function in a custom `ggplot2` plot
+### Manually using `plot_mix_comps` for a custom `ggplot2` plot
 ```{r }
 library(plotGMM)
 library(magrittr)
