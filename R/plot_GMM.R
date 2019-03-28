@@ -1,6 +1,6 @@
 #' Plots Components from Gaussian Mixture Models
 #'
-#' Generates a plot of densities with overlaid components form a Gaussian mixture model (GMM)
+#' Generates a plot of densities with overlaid components from a Gaussian mixture model (GMM)
 #' @usage plot_GMM(m, k=NULL)
 #' @param m a \code{mixEM} class object corresponding with the fit GMM
 #' @param k the number of components specified in the GMM, \code{m}
