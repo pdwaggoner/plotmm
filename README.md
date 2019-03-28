@@ -3,18 +3,28 @@ Old version: [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/plotGMM)
 Old version: [![Downloads](http://cranlogs.r-pkg.org/badges/grand-total/plotGMM)](http://cranlogs.r-pkg.org/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=plastic)](https://github.com/pdwaggoner/plotGMM/pulls)
 
-In collaboration with Fong Chun Chan [@tinyheero](https://github.com/tinyheero), the latest relaese (v 0.2.0) of `plotGMM` provides two main functions: 
+In collaboration with Fong Chan [@tinyheero](https://github.com/tinyheero), the latest release (v 0.2.0) of `plotGMM` includes substantial updates with easy-to-use tools for visualizing output from Gaussian mixture models: 
 
-1. `plot_GMM`: The main function of the packcage, `plot_GMM` allows the user to simply input the name of a `mixEM` object (from fitting a Gaussian mixture model (GMM) via the `normalmixEM` function from the `mixtools` package), as well as the number of components, `k`, that were used in the original GMM fit. The result is a clean `ggplot2` object showing the density of the data with overlaid mixture weight component curves.  
+1. `plot_GMM`: The main function of the package, `plot_GMM` allows the user to simply input the name of a `mixEM` class object (from fitting a Gaussian mixture model (GMM) using the `mixtools` package), as well as the number of components, `k`, that were used in the original GMM fit. The result is a clean `ggplot2` class object showing the density of the data with overlaid mixture weight component curves.  
 
-2. `plot_mix_comps`: A custom function for users interested in overlaying the components from a Gaussian mixture model. This allows for clean, precise plotting constraints, including mean (`mu`), variance (`sigma`), and mixture weight (`lambda`) of the components. The function superimposes the shape of the components over a `ggplot2` object. Importantly, while the `plot_mix_comps` function is used in the main `plot_GMM` function, users can use the `plot_mix_comps` function in their own custom plots. To do so, see the second example below. 
+2. `plot_cut_point`: Gaussian mixture models (GMMs) are not only used for uncovering clusters in data, but are also often used to derive cut points, or lines of separation between clusters in feature space (see the Benaglia et al. 2009 reference in the package documentation for more). The `plot_cut_point` function plots data densities with the overlaid cut point (the mean of the calculated `mu`) from `mixEM` class objects, which are GMM's fit using the `mixtools` package.
 
-### For plotting GMMs using `plot_GMM`
+3. `plot_mix_comps`: This is a custom function for users interested in manually overlaying the components from a Gaussian mixture model. This allows for clean, precise plotting constraints, including mean (`mu`), variance (`sigma`), and mixture weight (`lambda`) of the components. The function superimposes the shape of the components over a `ggplot2` class object. Importantly, while the `plot_mix_comps` function is used in the main `plot_GMM` function in our `plotGMM` package, users can use the `plot_mix_comps` function to build their own custom plots.
+
+### Plotting GMMs using `plot_GMM`
 ```{r }
-set.seed(2478)
 mixmdl <- mixtools::normalmixEM(faithful$waiting, k = 2)
 
 plot_GMM(mixmdl, 2)
+```
+
+### Plotting Cut Points from GMMs using `plot_cut_point`
+```{r }
+mixmdl <- mixtools::normalmixEM(faithful$waiting, k = 2)
+
+plot_cut_point(mixmdl, plot = TRUE) # produces plot
+
+plot_cut_point(mixmdl, plot = FALSE) # produces only numeric summary output from GMM
 ```
 
 ### Manually using the `plot_mix_comps` function in a custom `ggplot2` plot
