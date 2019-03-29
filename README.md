@@ -5,7 +5,7 @@ Old version: [![Downloads](http://cranlogs.r-pkg.org/badges/grand-total/plotGMM)
 
 In collaboration with Fong Chan [@tinyheero](https://github.com/tinyheero), the latest release (v 0.2.0) of `plotGMM` includes substantial updates with easy-to-use tools for visualizing output from Gaussian mixture models: 
 
-1. `plot_GMM`: The main function of the package, `plot_GMM` allows the user to simply input the name of a `mixEM` class object (from fitting a Gaussian mixture model (GMM) using the `mixtools` package), as well as the number of components, `k`, that were used in the original GMM fit. The result is a clean `ggplot2` class object showing the density of the data with overlaid mixture weight component curves.  
+1. `plot_GMM`: The main function of the package, `plot_GMM` allows the user to simply input the name of a `mixEM` class object (from fitting a Gaussian mixture model (GMM) using the `mixtools` package), as well as the number of components, `k`, that were used in the GMM fit. The result is a clean `ggplot2` object showing the density of the data with overlaid mixture weight component curves.  
 
 2. `plot_cut_point`: Gaussian mixture models (GMMs) are not only used for uncovering clusters in data, but are also often used to derive cut points, or lines of separation between clusters in feature space (see the Benaglia et al. 2009 reference in the package documentation for more). The `plot_cut_point` function plots data densities with the overlaid cut point (the mean of the calculated `mu`) from `mixEM` class objects, which are GMM's fit using the `mixtools` package.
 
