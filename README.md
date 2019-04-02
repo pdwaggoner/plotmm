@@ -36,7 +36,7 @@ plot_cut_point(mixmdl, plot = FALSE) # produces only numeric summary output from
 ```
 ![Cut Point from Old Faithful GMM using `plot_cut_point`](cp.png)
 
-### Use `plot_mix_comps` for manually creating a custom `ggplot2` plot
+### Use `plot_mix_comps` for a custom plot manually overlaying component curves
 ```{r }
 library(plotGMM)
 library(magrittr)
