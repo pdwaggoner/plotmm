@@ -12,6 +12,8 @@ Description: The main function, plot_GMM, is used for plotting output from Gauss
     Gaussian mixture models. For the plot_mix_comps function, usage most often will be specifying 
     the "fun" argument within "stat_function" in a ggplot2 object.
 Imports: ggplot2, mixtools, methods, graphics
+Suggests:
+    testthat
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
