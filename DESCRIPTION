@@ -2,7 +2,8 @@ Package: plotGMM
 Type: Package
 Title: Tools for Visualizing Gaussian Mixture Models
 Version: 0.2.0
-Authors@R: c(person("Philip", "Waggoner", role = c("aut", "cre"), email = "pdwaggoner@wm.edu"),
+BugReports: https://github.com/pdwaggoner/plotGMM/issues
+Authors@R: c(person("Philip", "Waggoner", role = c("aut", "cre"), email = "philip.waggoner@gmail.com"),
              person("Fong", "Chan", role = "aut"))
 Maintainer: Philip Waggoner <pdwaggoner@wm.edu>
 Description: The main function, plot_GMM, is used for plotting output from Gaussian mixture models, 
