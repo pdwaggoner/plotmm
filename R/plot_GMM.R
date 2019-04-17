@@ -66,7 +66,7 @@ plot_GMM <- function(m, k=NULL) {
     ggplot2::ggplot(data.frame(x)) +
     ggplot2::geom_density(
       ggplot2::aes(x),
-      colour = "black", fill = "black"
+      colour = "darkgray", fill = "lightgray"
     )
 
   for (i in seq(1, k)) {
