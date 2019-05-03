@@ -3,7 +3,7 @@
 [![Downloads](http://cranlogs.r-pkg.org/badges/grand-total/plotGMM)](http://cranlogs.r-pkg.org/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=plastic)](https://github.com/pdwaggoner/plotGMM/pulls)
 
-In collaboration with Fong Chan [@tinyheero](https://github.com/tinyheero), the latest release (v 0.2.0) of `plotGMM` includes substantial updates with easy-to-use tools for visualizing output from Gaussian mixture models: 
+In collaboration with Fong Chan ([@tinyheero](https://github.com/tinyheero)), the latest release (v 0.2.0) of `plotGMM` includes substantial updates with easy-to-use tools for visualizing output from Gaussian mixture models: 
 
 1. `plot_GMM`: The main function of the package, `plot_GMM` allows the user to simply input the name of a `mixEM` class object (from fitting a Gaussian mixture model (GMM) using the `mixtools` package), as well as the number of components, `k`, that were used in the GMM fit. The result is a clean `ggplot2` object showing the density of the data with overlaid mixture weight component curves.  
 
