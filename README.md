@@ -44,9 +44,9 @@ plot_cut_point(mixmdl, plot = TRUE) +
 # Option 2: Cutpoint value only
 plot_cut_point(mixmdl, plot = FALSE) # 67.35299
 ```
-![Cut Point from Old Faithful GMM using `plot_cut_point`](plotA.png)
-![Cut Point from Old Faithful GMM using `plot_cut_point`](plotW.png)
-![Cut Point from Old Faithful GMM using `plot_cut_point`](cp.png)
+![Cut Point from Old Faithful GMM using `plot_cut_point` (amerika)](plotA.png)
+![Cut Point from Old Faithful GMM using `plot_cut_point` (wesanderson](plotW.png)
+![Cut Point from Old Faithful GMM using `plot_cut_point` (default; custom labs](cp.png)
 
 ### Use `plot_mix_comps` for a custom plot manually overlaying component curves
 ```{r }
