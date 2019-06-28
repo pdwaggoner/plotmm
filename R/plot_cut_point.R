@@ -9,7 +9,6 @@
 #'@examples
 #'mixmdl <- mixtools::normalmixEM(faithful$waiting, k = 2)
 #'
-#'plot_cut_point(mixmdl, plot = TRUE) # returns a plot with the cut point, grayscale
 #'plot_cut_point(mixmdl, plot = TRUE, color = "amerika") # returns plot, amerika
 #'plot_cut_point(mixmdl, plot = TRUE, color = "wesanderson") # returns plot, wesanderson
 #'plot_cut_point(mixmdl, plot = FALSE) # returns only the cut point value from the GMM
