@@ -1,18 +1,20 @@
 ---
 title: "NEWS.md"
 author: "Philip D. Waggoner"
-date: "3/28/2019"
+date: "6/28/2019"
 output: html_document
 ---
 
-# `plotGMM` v 0.2.0
+# `plotGMM` v0.2.1
 ## Tools for Visualizing Gaussian Mixture Models
 
-### Changes: New Functions Added
+### Updates to `plot_cut_point`
 
-1. `plot_GMM`: Now the main function of the package, `plot_GMM` allows the user to simply input the name of a `mixEM` class object (from fitting a Gaussian mixture model (GMM) using the `mixtools` package), as well as the number of components, `k`, that were used in the original GMM fit. The result is a clean `ggplot2` class object showing the density of the data with overlaid mixture weight component curves.  
+1. Returned plots are now `ggplot2` objects (instead of base R, as in prior releases), which allow for more sophisticated plot options, as well as the ability for users to override default values (e.g., changing the plot title, axis labels, etc.).
 
-2. `plot_cut_point`: Gaussian mixture models (GMMs) are not only used for uncovering clusters in data, but are also often used to derive cut points, or lines of separation between clusters in feature space (see the Benaglia et al. 2009 reference in the package documentation for more). The `plot_cut_point` function plots data densities with the overlaid cut point (the mean of the calculated `mu`) from `mixEM` class objects, which are GMM's fit using the `mixtools` package.
+2. Users can select different color palettes for the histogram. Choices include the `Dem_Ind_Rep7` palette from the `amerika` package, the `Rushmore1` palette from the `wesanderson` package, or `grayscale`, which is the default option.
+
+3. A minor change is the returned value is now the *cut point* value (i.e., `mu` from a `mixtools` GMM) if `plot = FALSE`, instead of the full model summary as in prior releases. **Note**: If users set `plot = FALSE`, but specify a `color` in the function call, nothing will be returned (naturally). In this case, we recommend users either set `plot = TRUE` or remove the `color` argument from the function call. If nothing is done, then the function will still perform as normal.
 
 ## How do I get `plotGMM `?
 
