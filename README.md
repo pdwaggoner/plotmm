@@ -31,22 +31,28 @@ mixmdl <- mixtools::normalmixEM(faithful$waiting, k = 2)
 # Option 1.1: Plot with amerika palette
 plot_cut_point(mixmdl, plot = TRUE,
                 color = "amerika")
+```
+![Cut Point from Old Faithful GMM using `plot_cut_point` (amerika)](plotA.png)
 
+```{r }
 # Option 1.2: Plot with wesanderson palette
 plot_cut_point(mixmdl, plot = TRUE,
                 color = "wesanderson")
+```
+![Cut Point from Old Faithful GMM using `plot_cut_point` (wesanderson](plotW.png)
 
+```{r }
 # Option 1.3: Plot with default grayscale color, overriding default labels
 plot_cut_point(mixmdl, plot = TRUE) +
   ggplot2::labs(x = "Waiting Time (Minutes)",
                 title = "Cutpoint from GMM for Old Faithful Waiting Time")
+```
+![Cut Point from Old Faithful GMM using `plot_cut_point` (default; custom labs](plotCPD.png)
 
+```{r }
 # Option 2: Cutpoint value only
 plot_cut_point(mixmdl, plot = FALSE) # 67.35299
 ```
-![Cut Point from Old Faithful GMM using `plot_cut_point` (amerika)](plotA.png)
-![Cut Point from Old Faithful GMM using `plot_cut_point` (wesanderson](plotW.png)
-![Cut Point from Old Faithful GMM using `plot_cut_point` (default; custom labs](plotCPD.png)
 
 ### Use `plot_mix_comps` for a custom plot manually overlaying component curves
 ```{r }
