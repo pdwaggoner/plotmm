@@ -24,16 +24,28 @@ plot_GMM(mixmdl, 2)
 
 ### Plotting cut points from GMMs using `plot_cut_point`
 ```{r }
-# Fit a GMM using EM
+# Fit a GMM using EM via mixtools
 set.seed(576)
 mixmdl <- mixtools::normalmixEM(faithful$waiting, k = 2)
 
-# Option 1: Plot
-plot_cut_point(mixmdl, plot = TRUE) # produces plot
+# Option 1.1: Plot with amerika palette
+plot_cut_point(mixmdl, plot = TRUE,
+                color = "amerika")
 
-# Option 2: No plot
-plot_cut_point(mixmdl, plot = FALSE) # produces only numeric summary output from GMM
+# Option 1.2: Plot with wesanderson palette
+plot_cut_point(mixmdl, plot = TRUE,
+                color = "wesanderson")
+
+# Option 1.3: Plot with default grayscale color, overriding default labels
+plot_cut_point(mixmdl, plot = TRUE) +
+  ggplot2::labs(x = "Waiting Time (Minutes)",
+                title = "Cutpoint from GMM for Old Faithful Waiting Time")
+
+# Option 2: Cutpoint value only
+plot_cut_point(mixmdl, plot = FALSE) # 67.35299
 ```
+![Cut Point from Old Faithful GMM using `plot_cut_point`](plotA.png)
+![Cut Point from Old Faithful GMM using `plot_cut_point`](plotW.png)
 ![Cut Point from Old Faithful GMM using `plot_cut_point`](cp.png)
 
 ### Use `plot_mix_comps` for a custom plot manually overlaying component curves
