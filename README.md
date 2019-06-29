@@ -13,9 +13,9 @@ In collaboration with Fong Chan ([@tinyheero](https://github.com/tinyheero)), th
 
 ## Installation
 
-Dev (v0.2.1) release: `devtools::install_github("pdwaggoner/plotGMM")`
+Dev version: `devtools::install_github("pdwaggoner/plotGMM")`
 
-CRAN (v0.2.0) release: `install.packages("plotGMM"); library(plotGMM)`
+CRAN (v0.2.1) release: `install.packages("plotGMM"); library(plotGMM)`
 
 ### Plotting GMMs using `plot_GMM`
 ```{r }
