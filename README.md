@@ -48,8 +48,9 @@ plot_cut_point(mixmdl, plot = TRUE,
 ![Cut Point from Old Faithful GMM using `plot_cut_point` (wesanderson](plotW.png)
 
 ```{r }
-# Option 1.3: Plot with default grayscale color, overriding default labels
-plot_cut_point(mixmdl, plot = TRUE) +
+# Option 1.3: Plot with grayscale color, overriding default labels
+plot_cut_point(mixmdl, plot = TRUE,
+                color = "grayscale") +
   ggplot2::labs(x = "Waiting Time (Minutes)",
                 title = "Cutpoint from GMM for Old Faithful Waiting Time")
 ```
