@@ -1,6 +1,5 @@
 # `plotGMM` Tools for Visualizing Gaussian Mixture Models
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/plotGMM)](http://cran.r-project.org/package=plotGMM)
-[![Downloads](http://cranlogs.r-pkg.org/badges/grand-total/plotGMM)](http://cranlogs.r-pkg.org/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=plastic)](https://github.com/pdwaggoner/plotGMM/pulls)
 
 In collaboration with Fong Chan ([@tinyheero](https://github.com/tinyheero)), the latest release (v0.2.1) of `plotGMM` includes substantial updates with easy-to-use tools for visualizing output from univariate Gaussian mixture models: 
