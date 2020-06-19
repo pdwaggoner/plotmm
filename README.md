@@ -3,7 +3,7 @@
 [![CRAN RStudio mirror downloads](http://cranlogs.r-pkg.org/badges/plotGMM)](http://www.r-pkg.org/pkg/plotGMM)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=plastic)](https://github.com/pdwaggoner/plotGMM/pulls)
 
-`ATTENTION`: The package (including it's name) is under active development with **significant** updates coming shortly. Thus, the applications and examples below still apply for the current stable release (v 0.2.1), but will soon be significantly updated and expanded. Stand by for developments and news!
+### `ATTENTION`: The package (including it's name) is under active development with **significant** updates coming shortly. Thus, the applications and examples below still apply for the current stable release (v 0.2.1), but will soon be significantly updated and expanded. Stand by for developments and news!
 
 In collaboration with [Fong Chan](https://github.com/tinyheero) (Achilles Therapeutics) and Lu Zhang (Emory University), the latest release (v0.2.1) of `plotGMM` includes substantial updates with easy-to-use tools for visualizing output from univariate Gaussian mixture models: 
 
