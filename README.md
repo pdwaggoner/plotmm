@@ -3,6 +3,8 @@
 [![CRAN RStudio mirror downloads](http://cranlogs.r-pkg.org/badges/plotGMM)](http://www.r-pkg.org/pkg/plotGMM)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=plastic)](https://github.com/pdwaggoner/plotGMM/pulls)
 
+`ATTENTION`: The package (including it's name) is under active development with **significant** updates coming shortly. Thus, the applications and examples below still apply for the current stable release (v 0.2.1), but will soon be significantly updated and expanded. Stand by for developments and news!
+
 In collaboration with [Fong Chan](https://github.com/tinyheero) (Achilles Therapeutics) and Lu Zhang (Emory University), the latest release (v0.2.1) of `plotGMM` includes substantial updates with easy-to-use tools for visualizing output from univariate Gaussian mixture models: 
 
 1. `plot_GMM`: The main function of the package, `plot_GMM` allows the user to simply input the name of a `mixEM` class object (from fitting a Gaussian mixture model (GMM) using the `mixtools` package), as well as the number of components, `k`, that were used in the GMM fit. The result is a clean `ggplot2` object showing the density of the data with overlaid mixture weight component curves.  
