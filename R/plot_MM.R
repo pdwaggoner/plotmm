@@ -138,7 +138,7 @@ plot_MM <- function(m, k = NULL) {
       }
     }
     
-    # if multivariate normalmixEM
+       # if multivariate normalmixEM
     if (m$ft=="mvnormalmixEM"|length(m$mu)==2){
       if(is.null(k)){
         k <- ncol(m$posterior)
@@ -164,6 +164,7 @@ plot_MM <- function(m, k = NULL) {
         out_plot  <- out_plot +
           ggplot2::geom_point(data=p, aes(x=X.1, y=X.2), colour="black", size=0.7) +
           ggplot2::geom_point(data=e, aes(x=X.1, y=X.2), colour=component_colors[i], size=0.3) +
+          ggplot2::labs(title = "Main") +
           ggplot2::theme_minimal()
       }
       x1 <- data.frame(m$x[,1])
@@ -172,12 +173,13 @@ plot_MM <- function(m, k = NULL) {
       colnames(x2) <- "density"
       hist1 <- ggplot2::ggplot(x1) +
         ggplot2::geom_density(ggplot2::aes(x=density), colour = "darkgray", fill = "lightgray") +
+        ggplot2::labs(title = "X1") +
         ggplot2::theme_minimal()
       hist2 <- ggplot2::ggplot(x2) +
         ggplot2::geom_density(ggplot2::aes(x=density), colour = "darkgray", fill = "lightgray") +
+        ggplot2::labs(title = "X2") +
         ggplot2::theme_minimal()
-      out_plot <- ggpubr::ggarrange(out_plot, hist1+rremove("x.text"), hist2+rremove("x.text"), labels=c("Main", "X.1", "X.2"), ncol=2, nrow=2) +
-        ggplot2::theme_minimal()
+      out_plot <- (out_plot + hist1 + hist2) + patchwork::plot_layout(ncol = 2) + ggplot2::theme_minimal()
     }
   } 
   
