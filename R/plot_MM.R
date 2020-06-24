@@ -6,7 +6,7 @@ plot_MM <- function(m, k = NULL) {
       install.packages(new.pkg, dependencies = TRUE, quiet = FALSE, verbose = FALSE)
     sapply(pkg, require, character.only = TRUE)
   }
-  lapply(c("dplyr","ggplot2","mixtools","methods","EMCluster","flexmix", "ggpubr"), pkgTest)
+  lapply(c("dplyr","ggplot2","mixtools","methods","EMCluster","flexmix", "ggpubr", "patchwork"), pkgTest)
   # determine colors needed (since k<16, only defined 15 colors)
   component_colors <- c("red","blue","green","yellow","orange","purple","darksalmon","goldenrod2","dodgerblue", "darkorange3","burlywood4", "darkmagenta", "firebrick","deeppink2","darkseagreen1")
   
