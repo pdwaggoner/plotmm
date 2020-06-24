@@ -1,8 +1,4 @@
-plot_mix_comps <- function(x, mu, sigma, lam) {
-  lam * stats::dnorm(x, mu, sigma)
-}
-
-plot_MM <- function(m, k=NULL) {
+plot_MM <- function(m, k = NULL) {
   # install package if needed
   pkgTest <- function(pkg){
     new.pkg <- pkg[!(pkg %in% installed.packages()[, "Package"])]
