@@ -3,7 +3,7 @@ plot_MM <- function(m, k = NULL) {
   pkgTest <- function(pkg){
     new.pkg <- pkg[!(pkg %in% installed.packages()[, "Package"])]
     if (length(new.pkg)) 
-      install.packages(new.pkg, dependencies = TRUE, quiet = FALSE, verbose = FALSE)
+      install.packages(new.pkg, dependencies = TRUE, quiet = TRUE, verbose = FALSE)
     sapply(pkg, require, character.only = TRUE)
   }
   lapply(c("dplyr","ggplot2","mixtools","methods","EMCluster","flexmix", "ggpubr", "patchwork"), pkgTest)
