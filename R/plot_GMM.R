@@ -18,7 +18,7 @@
 #' 
 #' @export
 
-plot_GMM <- function(m, k=NULL) {
+plot_GMM <- function(m, k = NULL) {
   if (!requireNamespace("ggplot2", quietly = TRUE)) {
     stop("Package \"ggplot2\" needed for this function to work. Please install it.",
          call. = FALSE)
