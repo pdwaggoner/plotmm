@@ -139,7 +139,7 @@ plot_MM <- function(m, k = NULL) {
     }
     
        # if multivariate normalmixEM
-    if (m$ft=="mvnormalmixEM"|length(m$mu)==2){
+    if (m$ft=="mvnormalmixEM"|length(m$mu)>=2){
       if(is.null(k)){
         k <- ncol(m$posterior)
       }
