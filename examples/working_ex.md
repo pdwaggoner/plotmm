@@ -8,6 +8,7 @@ set.seed(100)
 out <- regmixEM(Equivalence, NO, verb = TRUE, epsilon = 1e-04)
 plot_MM(out)
 ```
+![Mixture of Regressions](reg.png)
 
 ### Multivariate normal
 ```{R}
@@ -19,3 +20,4 @@ mu <- list(c(0, 0), c(3, 4), c(2,4))
 out <- mvnormalmixEM(X.1, arbvar = FALSE, mu = mu,epsilon = 1e-02)
 plot_MM(out)
 ```
+![Multivariate Mixture of Gaussians](mv.png)
