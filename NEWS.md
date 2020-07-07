@@ -1,21 +1,37 @@
 ---
 title: "NEWS.md"
-author: "Philip D. Waggoner"
-date: "6/28/2019"
+author: "Waggoner, Chan, Zhang"
+date: "07/07/2020"
 output: html_document
 ---
 
-# `plotGMM` v0.2.1
-## Tools for Visualizing Gaussian Mixture Models
+# `plotmm` v0.1.0
 
-### Updates to `plot_cut_point`
+## Tidy Tools for Visualizing Mixture Models
 
-1. Returned plots are now `ggplot2` objects (instead of base R, as in prior releases), which allow for more sophisticated plot options, as well as the ability for users to override default values (e.g., changing the plot title, axis labels, etc.).
+The `plotmm` is a substantially updated version of the `plotGMM` package (Waggoner and Chan). Whereas `plotGMM` only includes support for visualizing univariate Gaussian mixture models fit via the `mixtools` package, the new `plotmm` package supports numerous mixture model specifications from several packages.
 
-2. Users can select different color palettes for the histogram. Choices include the `Dem_Ind_Rep7` palette from the `amerika` package, the `Rushmore1` palette from the `wesanderson` package, or `grayscale`, which is the default option.
+Waggoner and Chan would like to sincerely thank Zhang for joining the team and making development of this package possible.
 
-3. A minor change is the returned value is now the *cut point* value (i.e., `mu` from a `mixtools` GMM) if `plot = FALSE`, instead of the full model summary as in prior releases. **Note**: If users set `plot = FALSE`, but specify a `color` in the function call, nothing will be returned (naturally). In this case, we recommend users either set `plot = TRUE` or remove the `color` argument from the function call. If nothing is done, then the function will still perform as normal.
+## Key Features
 
-## How do I get `plotGMM `?
+Supported model objects/packages include:
 
-The package is released on CRAN. If you have any questions or find any bugs requiring fixing, please feel free to contact us either directly (see the `DESCRIPTION` file for more) or by opening an issue ticket on GitHub. Thanks and enjoy!
+1. `mixtools`
+2. `EMCluster`
+3. `flexmix`
+
+Supported specifications include mixtures of:
+
+1. Univariate Gaussians
+2. Multivariate Gaussians
+3. Gammas
+4. Logistic regressions
+5. Linear regressions
+6. Poisson regressions
+
+Note that though `plotmm` includes many updates and expanded functionality beyond `plotGMM`, it is under active development with more model objects and specifications forthcoming. Stay tuned for updates, and always feel free to open an issue ticket to share anything you'd like to see included in future versions of the package.
+
+## How do I get `plotmm `?
+
+The package is available on CRAN. If you have any questions or find any bugs requiring fixing, please feel free to contact us either directly (see the `DESCRIPTION` for more) or by opening an issue ticket on GitHub. Thanks and enjoy!
