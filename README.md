@@ -5,10 +5,10 @@
 
 ---
 
-authors:
-  - Philip D. Waggoner^[University of Chicago]
-  - Fong Chun Chan^[Achilles Therapeutics]
-  - Lu Zhang^[Emory University]
+Package Authors:
+  - [Philip D. Waggoner](https://github.com/pdwaggoner), University of Chicago
+  - [Fong Chun Chan](https://github.com/tinyheero), Achilles Therapeutics
+  - Lu Zhang, Emory University
 
 ---
 
