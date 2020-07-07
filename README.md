@@ -6,7 +6,7 @@
 ---
 title: "README.md"
 author:
-  - Philip D. Waggoner^[College of William & Mary]
+  - Philip D. Waggoner^[University of Chicago]
   - Fong Chun Chan^[Achilles Therapeutics]
   - Lu Zhang^[Emory University]
 date: 07/07/2020
@@ -38,7 +38,7 @@ The package has five functions:
 
 ## Installation
 
-Dev version: `devtools::install_github("pdwaggoner/plotGMM")`
+Dev version: `devtools::install_github("pdwaggoner/plotmm")`
 
 CRAN (v0.1.0) release: *Forthcoming*
 
