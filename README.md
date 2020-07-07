@@ -4,13 +4,12 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=plastic)](https://github.com/pdwaggoner/plotGMM/pulls)
 
 ---
-title: "README.md"
-author:
+
+authors:
   - Philip D. Waggoner^[University of Chicago]
   - Fong Chun Chan^[Achilles Therapeutics]
   - Lu Zhang^[Emory University]
-date: 07/07/2020
-output: html_document
+
 ---
 
 In collaboration with [Fong Chan](https://github.com/tinyheero) and Lu Zhang (Emory University), we have developed `plotmm`, which is a substantial update to the [`plotGMM` package](https://cran.r-project.org/web/packages/plotGMM/index.html).
