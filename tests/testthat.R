@@ -1,4 +1,5 @@
 library("testthat")
-library("plotGMM")
+library("plotmm")
 
-test_check("plotGMM")
+test_check("plotmm")
+
