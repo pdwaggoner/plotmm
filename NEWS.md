@@ -1,7 +1,7 @@
 ---
 title: "NEWS.md"
 author: "Waggoner, Chan, Zhang"
-date: "07/07/2020"
+date: "07/08/2020"
 output: html_document
 ---
 
@@ -9,7 +9,7 @@ output: html_document
 
 ## Tidy Tools for Visualizing Mixture Models
 
-The `plotmm` is a substantially updated version of the `plotGMM` package (Waggoner and Chan). Whereas `plotGMM` only includes support for visualizing univariate Gaussian mixture models fit via the `mixtools` package, the new `plotmm` package supports numerous mixture model specifications from several packages.
+The `plotmm` package is a substantially updated version of the `plotGMM` package (Waggoner and Chan). Whereas `plotGMM` only includes support for visualizing univariate Gaussian mixture models fit via the `mixtools` package, the new `plotmm` package supports numerous mixture model specifications from several packages (model objects).
 
 Waggoner and Chan would like to sincerely thank Zhang for joining the team and making development of this package possible.
 
@@ -30,7 +30,7 @@ Supported specifications include mixtures of:
 5. Linear regressions
 6. Poisson regressions
 
-Note that though `plotmm` includes many updates and expanded functionality beyond `plotGMM`, it is under active development with more model objects and specifications forthcoming. Stay tuned for updates, and always feel free to open an issue ticket to share anything you'd like to see included in future versions of the package.
+Note that though `plotmm` includes many updates and expanded functionality beyond `plotGMM`, it is under active development with support for more model objects and specifications forthcoming. Stay tuned for updates, and always feel free to open an issue ticket to share anything you'd like to see included in future versions of the package.
 
 ## How do I get `plotmm `?
 
