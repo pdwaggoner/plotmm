@@ -9,7 +9,7 @@ output: html_document
 
 ## Tidy Tools for Visualizing Mixture Models
 
-The `plotmm` package is a substantially updated version of the `plotGMM` package (Waggoner and Chan). Whereas `plotGMM` only includes support for visualizing univariate Gaussian mixture models fit via the `mixtools` package, the new `plotmm` package supports numerous mixture model specifications from several packages (model objects).
+The `plotmm` package is a substantially updated version of the [`plotGMM` package (Waggoner and Chan)](https://CRAN.R-project.org/package=plotGMM). Whereas `plotGMM` only includes support for visualizing univariate Gaussian mixture models fit via the `mixtools` package, the new `plotmm` package supports numerous mixture model specifications from several packages (model objects).
 
 Waggoner and Chan would like to sincerely thank Zhang for joining the team and making development of this package possible.
 
