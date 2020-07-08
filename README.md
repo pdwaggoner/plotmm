@@ -5,8 +5,8 @@
 
 ---
 
-Package Authors and Contributors:
-  - [Philip D. Waggoner](https://github.com/pdwaggoner), University of Chicago
+Package authors and contributors:
+  - [Philip D. Waggoner](https://github.com/pdwaggoner) (pkg maintainer), University of Chicago
   - [Fong Chun Chan](https://github.com/tinyheero), Achilles Therapeutics
   - [Lu Zhang](https://github.com/LuZhang0128), Emory University
 
