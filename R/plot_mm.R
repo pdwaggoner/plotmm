@@ -337,7 +337,7 @@ plot_mm <- function(m, k = NULL, data = NULL) {
       ggplot2::ggtitle("X1") +
       ggplot2::theme_minimal()
     hist2 <- ggplot2::ggplot(x2) +
-      ggplot2::ggtitle("X1") +
+      ggplot2::ggtitle("X2") +
       ggplot2::geom_density(ggplot2::aes(x=density), colour = "darkgray", fill = "lightgray") +
       ggplot2::theme_minimal()
     out_plot <- out_plot / (hist1 + hist2)
