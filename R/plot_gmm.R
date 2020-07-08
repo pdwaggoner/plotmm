@@ -7,14 +7,15 @@
 #' @details Original function from the \code{plotGMM} package. Retained here for bridging between the packages. We recommend using instead the updated \code{plot_mm} function.
 #'
 #' Note: \code{plot_gmm} requires a \code{mixtools} object to be supplied. Users must enter the same component value, \code{k}, in the \code{plot_gmm} function, as that which was specified in the original GMM specification (also \code{k} in \code{mixtools}).
+#'
 #' @examples
-#' set.seed(235)
+#' if(require(mixtools)){
 #' mixmdl <- mixtools::normalmixEM(faithful$waiting, k = 2)
-#'
+#' }
 #' plot_gmm(mixmdl, 2)
-#' @references Benaglia, T., Chauveau, D., Hunter, D. and Young, D., 2009. mixtools: An R package for analyzing finite mixture models. Journal of Statistical Software, 32(6), pp.1-29.
 #'
-#' Wickham, H., 2016. ggplot2: elegant graphics for data analysis. Springer.
+#' @references Benaglia, T., Chauveau, D., Hunter, D. and Young, D., 2009. mixtools: An R package for analyzing finite mixture models. Journal of Statistical Software, 32(6), pp.1-29.
+#' @references Wickham, H., 2016. ggplot2: elegant graphics for data analysis. Springer.
 #'
 #' @export
 plot_gmm <- function(m, k=NULL) {
