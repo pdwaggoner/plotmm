@@ -12,7 +12,7 @@ Description: The main function, plot_mm(), is used for plotting output from mixt
     tidyverse, the package also includes the plot_cut_point() function to visualize the cutpoint (mu) from the model
     over a histogram of the data density with several color options. Finally, the package includes the plot_mix_comps() 
     helper function, which is used for both added customization as well as in the plot_mm() function. 
-    Supported model objects include: mixtools, EMCluster, and flexmix, with more from each forthcoming. 
+    Supported model objects include: 'mixtools', 'EMCluster', and 'flexmix', with more from each forthcoming. 
     Supported mixture model specifications include mixtures of univariate Gaussians, multivariate Gaussians, Gammas, 
     logistic regressions, linear regressions, and Poisson regressions.
 Imports: methods, wesanderson, amerika, ggplot2, dplyr, patchwork
