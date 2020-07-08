@@ -58,26 +58,6 @@ plot_mm(mixmdl, 2) +
 ![Univariate GMM](one.pdf)
 
 
-Next is an example for a mixture of logistic regressions:
-
-```{r }
-# set up the data (replication of mixtools examples for comparability)
-beta <- matrix(c(-10, .1, 20, -.1), 2, 2)
-x <- runif(500, 50, 250)
-x1 <- cbind(1, x)
-xbeta <- x1%*%beta
-w <- rbinom(500, 1, .3)
-y <- w*rbinom(500, size=1, prob=(1/(1+exp(-xbeta[, 1])))) + (1-w)*rbinom(500, size=1, prob=(1/(1+exp(-xbeta[, 2]))))
-out <- logisregmixEM(y, x, beta = beta, lambda = c(.3, .7), verb = TRUE, epsilon = 1e-01)
-
-# visualize
-plot_mm(out) +
-  ggplot2::labs(title = "Mixture of Logistic Regressions",
-                subtitle = "Mixtools Object")
-```
-![Mixture of Logistic Regressions](two.pdf)
-
-
 Next is an example of a mixture of linear regressions:
 
 ```{r }
