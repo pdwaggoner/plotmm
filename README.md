@@ -46,25 +46,24 @@ Stable release (v0.1.0) on CRAN: *Forthcoming*
 First, here is an example for univariate normal mixture model:
 
 ```{r }
-set.seed(576)
-
-mixmdl <- mixtools::normalmixEM(iris$Petal.Length, k = 2)
+set.seed(123)
+out <- mixtools::normalmixEM(iris$Petal.Length, k = 2)
 
 # visualize
-plot_mm(mixmdl, 2) +
+plot_mm(out, 2) +
   ggplot2::labs(title = "Univariate Gaussian Mixture Model",
                 subtitle = "Mixtools Object")
 ```
-![Univariate GMM](one.pdf)
+![Univariate Gaussian Mixture Model (GMM)](one.png)
 
 
 Next is an example of a mixture of linear regressions:
 
 ```{r }
-# set up the data (replication of mixtools examples for comparability)
-data(NOdata)
-attach(NOdata)
-set.seed(100)
+# set up the data (replication of mixtools example for comparability)
+data(NOdata); attach(NOdata)
+
+set.seed(123)
 out <- regmixEM(Equivalence, NO, verb = TRUE, epsilon = 1e-04)
 df <- data.frame(out$beta)
 
@@ -73,43 +72,89 @@ plot_mm(out) +
   ggplot2::labs(title = "Mixture of Regressions",
                 subtitle = "Mixtools Object")
 ```
-![Mixture of Regressions](three.pdf)
+![Mixture of Regressions](two.png)
 
 
 Next is a bivariate Gaussian mixture model (via EMCluster)
 
 ```{r}
 library(EMCluster)
-set.seed(1234)
+
+set.seed(123)
 x <- da1$da
 out <- init.EM(x, nclass = 10, method = "em.EM")
 
-plot1 <- plot_mm(out, data=x)
+# visualize and annotate
+plot <- plot_mm(out, data = x)
 
-plot1 + patchwork::plot_annotation(title = "Bivariate Gaussian Mixture Model",
+plot + patchwork::plot_annotation(title = "Bivariate Gaussian Mixture Model",
                                   subtitle = "EMCluster Object")
 ```
-![Bivariate GMM](four.pdf)
+![Bivariate GMM (EMCluster)](three.png)
 
 
-### Plot cut points via `plot_cut_point()` (with the [amerika](https://cran.r-project.org/web/packages/amerika/index.html) color palette, wesanderson, grayscale, and cutpoint only)
+Here is a bivariate Gaussian mixture model (via mixtools)
+
+```{r}
+# set up the data (replication of mixtools example for comparability)
+set.seed(123)
+x.1 <- rmvnorm(40, c(0, 0))
+x.2 <- rmvnorm(60, c(3, 4))
+X.1 <- rbind(x.1, x.2)
+mu <- list(c(0, 0), c(3, 4))
+out <- mvnormalmixEM(X.1, arbvar = FALSE, mu = mu,epsilon = 1e-02)
+
+# visualize and annotate
+plot <- plot_mm(out)
+
+plot + patchwork::plot_annotation(title = "Bivariate Gaussian Mixture Model",
+                                  subtitle = "Mixtools Object")
+```
+![Bivariate GMM (mixtools)](four.png)
+
+
+Finally, here is a mixture of Gammas
+
+```{r}
+# set up the data (replication of mixtools example for comparability)
+set.seed(123)
+x <- c(rgamma(200, shape =50, scale = 11), rgamma(200, shape = 28, scale = 6))
+out <- gammamixEM(x, lambda = c(1, 1)/2)
+
+# visualize
+plot_mm(out) +
+  ggplot2::labs(title = "Gamma Mixture Model",
+                subtitle = "Mixtools Object")
+
+```
+![Gamma Mixture Model](five.png)
+
+
+### Plot cut points (or not) via `plot_cut_point()` 
+#### ...with the [amerika](https://CRAN.R-project.org/package=amerika) color palette, the [wesanderson](https://CRAN.R-project.org/package=wesanderson) color palette, the default grayscale color palette, or just the cut point value only
 
 ```{r }
 mixmdl <- mixtools::normalmixEM(faithful$waiting, k = 2)
 
 plot_cut_point(mixmdl, plot = TRUE, color = "amerika") # produces plot
 
-plot_cut_point(mixmdl, plot = FALSE) # produces only cut point value
+plot_cut_point(mixmdl, plot = TRUE, color = "wesanderson") # produces plot
+
+plot_cut_point(mixmdl, plot = TRUE, color = "grayscale") # produces plot
 ```
-![Cut Point from Old Faithful GMM using `plot_cut_point` (amerika)](plotA.png)
+![Cut Point from Old Faithful GMM using `plot_cut_point()` (amerika)](six.png)
 
-![Cut Point from Old Faithful GMM using `plot_cut_point` (wesanderson](plotW.png)
+![Cut Point from Old Faithful GMM using `plot_cut_point()` (wesanderson)](seven.png)
 
-![Cut Point from Old Faithful GMM using `plot_cut_point` (default; custom labs](plotCPD.png)
+![Cut Point from Old Faithful GMM using `plot_cut_point()` (default grayscale)](eight.png)
+
+
+Or calculate the cut point value only by setting `plot = FALSE`
 
 ```{r }
-# Or cutpoint value only
-plot_cut_point(mixmdl, plot = FALSE) # 67.35299
+plot_cut_point(mixmdl, plot = FALSE)
+
+# [1] 67.35299
 ```
 
 
