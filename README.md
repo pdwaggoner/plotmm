@@ -44,7 +44,7 @@ The package supports several model objects (from 'mixtools', 'EMCluster', and 'f
 
 Dev version: `devtools::install_github("pdwaggoner/plotmm")`
 
-Stable release (v0.1.0) on CRAN: *Forthcoming*
+Stable release (v0.1.0) on CRAN: `install.packages("plotmm"); library(plotmm)`
 
 ### Tidy visualization of mixture models via `plot_mm()`
 
