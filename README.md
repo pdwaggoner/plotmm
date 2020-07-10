@@ -24,7 +24,7 @@ The package has five functions:
 
 1. `plot_mm()`: The main function of the package, `plot_mm` allows the user to simply input the name of the fit mixture model, as well as an optional argument to pass the number of components `k` that were used in the original fit. *Note*: the function will automatically detect the number of components if `k` is not supplied. The result is a tidy ggplot of the density of the data with overlaid mixture weight component curves. Importantly, as the grammar of graphics is the basis of visualization in this package, all other tidyverse-friendly customization options work with any of the `plotmm`'s functions (e.g., customizing with `ggplot2`'s functions like `labs()` or `theme_*()`; or `patchwork`'s `plot_annotation()`). There are examples of these and others below.  
 
-2. `plot_cut_point()`: Mixture models are often used to derive cut points of separation between groups in feature space. `plot_cut_point()` plots the data density with the overlaid cut point (the mean of the calculated `mu`) from the fit mixture model. 
+2. `plot_cut_point()`: Mixture models are often used to derive cut points of separation between groups in feature space. `plot_cut_point()` plots the data density with the overlaid cut point (point of greatest separation between component class means) from the fit mixture model. 
 
 3. `plot_mix_comps()`: A helper function allowing for expanded customization of mixture model plots. The function superimposes the shape of the components over a `ggplot2` object. This function is also used to render all plots in the main `plot_mm()` function.
 
