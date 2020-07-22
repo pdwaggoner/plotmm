@@ -41,6 +41,8 @@ The package supports several model objects (from 'mixtools', 'EMCluster', and 'f
 5. Linear regressions
 6. Poisson regressions
 
+See the complementary R-Bloggers post [here](https://www.r-bloggers.com/tidy-visualization-of-mixture-models-in-r/).
+
 ## Installation
 
 Dev version: `devtools::install_github("pdwaggoner/plotmm")`
