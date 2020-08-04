@@ -2,12 +2,13 @@
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/plotmm)](http://cran.r-project.org/package=plotmm)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=plastic)](https://github.com/pdwaggoner/plotmm/pulls)
 [![CRAN RStudio mirror downloads](http://cranlogs.r-pkg.org/badges/plotmm)](http://www.r-pkg.org/pkg/plotmm)
-<!-- [![Downloads](http://cranlogs.r-pkg.org/badges/grand-total/plotmm)](http://cranlogs.r-pkg.org/) -->
+[![Documentation](https://img.shields.io/badge/documentation-plotmm-orange.svg?colorB=E91E63)](https://www.r-pkg.org/pkg/plotmm)
 
 ---
 #### [`plotGMM`](https://CRAN.R-project.org/package=plotGMM):
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/plotGMM)](http://cran.r-project.org/package=plotGMM)
 [![CRAN RStudio mirror downloads](http://cranlogs.r-pkg.org/badges/plotGMM)](http://www.r-pkg.org/pkg/plotGMM)
+[![Documentation](https://img.shields.io/badge/documentation-plotGMM-orange.svg?colorB=E91E63)](https://www.r-pkg.org/pkg/plotGMM)
 
 ---
 
