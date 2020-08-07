@@ -54,13 +54,13 @@ We welcome PRs or any form of contribution to the `plotmm` package, as it's stil
 
 - Check existing <a href=https://github.com/pdwaggoner/plotmm/issues><img src="docs/src/assets/issue_help.png" height="25"></a> issues to see things that we'd like to implement, but where we need some extra help.
 
-## Installation
+# Installation
 
 Dev version: `devtools::install_github("pdwaggoner/plotmm")`
 
 Stable release (v0.1.0) on CRAN: `install.packages("plotmm"); library(plotmm)`
 
-### Tidy visualization of mixture models via `plot_mm()`
+## Tidy visualization of mixture models via `plot_mm()`
 
 First, here is an example for univariate normal mixture model:
 
@@ -150,7 +150,7 @@ plot_mm(out) +
 
 
 ### Plot cut points (or not) via `plot_cut_point()` 
-#### ...with the [amerika](https://CRAN.R-project.org/package=amerika) color palette, the [wesanderson](https://CRAN.R-project.org/package=wesanderson) color palette, the default grayscale color palette, or just the cut point value only
+#### ...with the [amerika](https://CRAN.R-project.org/package=amerika) color palette, the [wesanderson](https://CRAN.R-project.org/package=wesanderson) color palette, or the default grayscale color palette
 
 ```{r }
 mixmdl <- mixtools::normalmixEM(faithful$waiting, k = 2)
@@ -168,7 +168,7 @@ plot_cut_point(mixmdl, plot = TRUE, color = "grayscale") # produces plot
 ![Cut Point from Old Faithful GMM using `plot_cut_point()` (default grayscale)](eight.png)
 
 
-Or calculate the cut point value only by setting `plot = FALSE`
+#### Or calculate the cut point value only by setting `plot = FALSE`
 
 ```{r }
 plot_cut_point(mixmdl, plot = FALSE)
@@ -177,7 +177,7 @@ plot_cut_point(mixmdl, plot = FALSE)
 ```
 
 
-### Customize a ggplot with `plot_mix_comps()`
+### Customize a ggplot object with `plot_mix_comps()`
 
 ```{r }
 library(plotGMM)
