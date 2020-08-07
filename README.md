@@ -44,6 +44,16 @@ The package supports several model objects (from 'mixtools', 'EMCluster', and 'f
 
 See the complementary R-Bloggers post [here](https://www.r-bloggers.com/tidy-visualization-of-mixture-models-in-r/).
 
+## Contribute
+
+We welcome PRs or any form of contribution to the `plotmm` package, as it's still very much in it's infancy. For example (thanks [@DominiqueMakowski](https://github.com/DominiqueMakowski) for the language ideas below):
+
+- Create or check existing <a href=https://github.com/pdwaggoner/plotmm/issues><img src="docs/src/assets/issue_bug.png" height="25"></a> issues to report, replicate, or debug.
+
+- Create or check existing <a href=https://github.com/pdwaggoner/plotmm/issues><img src="docs/src/assets/issue_featureidea.png" height="25"></a> issues to suggest or discuss a new feature for the package.
+
+- Check existing <a href=https://github.com/pdwaggoner/plotmm/issues><img src="docs/src/assets/issue_help.png" height="25"></a> issues to see things that we'd like to implement, but where we need some extra help.
+
 ## Installation
 
 Dev version: `devtools::install_github("pdwaggoner/plotmm")`
