@@ -3,6 +3,8 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=plastic)](https://github.com/pdwaggoner/plotmm/pulls)
 [![CRAN RStudio mirror downloads](http://cranlogs.r-pkg.org/badges/plotmm)](http://www.r-pkg.org/pkg/plotmm)
 [![Documentation](https://img.shields.io/badge/documentation-plotmm-orange.svg?colorB=E91E63)](https://www.r-pkg.org/pkg/plotmm)
+[![R build
+status](https://github.com/pdwaggoner/plotmm/plotmm/R-CMD-check/badge.svg)](https://github.com/pdwaggoner/plotmm/actions)
 
 ---
 #### [`plotGMM`](https://CRAN.R-project.org/package=plotGMM):
