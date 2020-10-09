@@ -54,6 +54,8 @@ We welcome PRs or any form of contribution to the `plotmm` package, as it's stil
 
 - Check existing <a href=https://github.com/pdwaggoner/plotmm/issues><img src="docs/src/assets/issue_help.png" height="25"></a> issues to see things that we'd like to implement, but where we need some extra help.
 
+If you decide to contribute, please review and abide by our [Code of Conduct](https://github.com/pdwaggoner/plotmm/blob/master/CODE_OF_CONDUCT.md). 
+
 # Installation
 
 Dev version: `devtools::install_github("pdwaggoner/plotmm")`
