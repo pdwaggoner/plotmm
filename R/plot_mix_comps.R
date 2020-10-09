@@ -36,4 +36,30 @@
 #'                colour = "blue")
 #'
 #' @export
-[LU TO INSERT CODE HERE]
+plot_mix_comps <- function(x, mu = NULL, sigma = NULL, lam = 1, beta0 = NULL,
+                           beta1 = NULL, alpha = NULL, beta = NULL,
+                           normal = FALSE, logisreg = FALSE,
+                           gamma = FALSE, poisson = FALSE) {
+  if (normal==TRUE) {
+    if(is.null(mu) | is.null(sigma) | is.null(lam)){
+      stop("Check input for normal distribution.")
+    }
+    lam*stats::dnorm(x, mean = mu, sd = sigma)
+  } else if (logisreg==TRUE) {
+    if(is.null(beta0) | is.null(beta1)){
+      stop("Check input for binary logistic regrssions.")
+    }
+    stats::plogis(beta0 + beta1*x)
+  } else if (gamma==TRUE) {
+    if(is.null(alpha) | is.null(beta) | is.null(lam)){
+      stop("Check input for gamma distribution.")
+    }
+    lam*stats::dgamma(x, shape = alpha, scale = beta)
+  } else if (poisson==TRUE) {
+    if(is.null(beta0) | is.null(beta1)){
+      stop("Check input for poisson distribution.")
+    }
+    lam*stats::rpois(x, exp(beta0 + beta1))
+  }
+}
+
