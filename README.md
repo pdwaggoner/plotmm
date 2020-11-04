@@ -208,4 +208,4 @@ ggplot2::ggplot(data.frame(x)) +
   ggplot2::ylab("Density") + 
   ggplot2::theme_minimal()
 ```
-![Custom Plot using `plot_mix_comps`](faithful.png)
+![Custom Plot using the `normal` variant of `plot_mix_comps()`: `plot_mix_comps_normal()`](faithfulnew.png)
