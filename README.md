@@ -86,7 +86,6 @@ data(NOdata); attach(NOdata)
 
 set.seed(123)
 out <- regmixEM(Equivalence, NO, verb = TRUE, epsilon = 1e-04)
-df <- data.frame(out$beta)
 
 # visualize
 plot_mm(out) +
