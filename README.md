@@ -189,7 +189,7 @@ plot_cut_point(mixmdl, plot = FALSE)
 ```
 
 
-### Build a custom `ggplot` of a mixture model with `plot_mix_comps_normal()`
+### Build a custom `ggplot()` of a mixture model with `plot_mix_comps_normal()`
 
 ```{r }
 mixmdl <- mixtools::normalmixEM(faithful$waiting, k = 2)
