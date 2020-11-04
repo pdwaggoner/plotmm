@@ -16,13 +16,15 @@
 #' x <- mixmdl$x
 #' x <- data.frame(x)
 #' ggplot2::ggplot(data.frame(x)) +
-#'   ggplot2::geom_density(ggplot2::aes(x), color="black", fill="black") +
-#'   ggplot2::stat_function(geom = "line", fun = plot_mix_comps_normal,
-#'                 args = list(mixmdl$mu[1], mixmdl$sigma[1], lam = mixmdl$lambda[1]),
-#'                 colour = "red") +
-#'   ggplot2::stat_function(geom = "line", fun = plot_mix_comps_normal,
-#'                 args = list(mixmdl$mu[2], mixmdl$sigma[2], lam = mixmdl$lambda[2]),
-#'                colour = "blue")
+#' ggplot2::geom_histogram(ggplot2::aes(x, ..density..), binwidth = 1, colour = "black", fill = "white") +
+#' ggplot2::stat_function(geom = "line", fun = plotmm::plot_mix_comps_normal,
+#'                        args = list(mu = mixmdl$mu[1], sigma = mixmdl$sigma[1], lam = mixmdl$lambda[1]),
+#'                        colour = "red", lwd = 1) +
+#' ggplot2::stat_function(geom = "line", fun = plotmm::plot_mix_comps_normal,
+#'                        args = list(mu = mixmdl$mu[2], sigma = mixmdl$sigma[2], lam = mixmdl$lambda[2]),
+#'                        colour = "blue", lwd = 1) +
+#' ggplot2::ylab("Density") + 
+#' ggplot2::theme_minimal()
 #'
 #' @export
 plot_mix_comps_normal <- function(x, mu, sigma, lam) {
