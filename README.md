@@ -113,7 +113,7 @@ plot + patchwork::plot_annotation(title = "Bivariate Gaussian Mixture Model",
 ![Bivariate GMM (EMCluster)](three.png)
 
 
-Here is a bivariate Gaussian mixture model (via mixtools)
+Here is a bivariate Gaussian mixture model (via mixtools). As with the previous case of visualizing a bivariate Gaussian mixture model, but with `EMCluster`, so too here you have the same options for calling the final and *full* plot versus the individual ellipses plots.
 
 ```{r}
 # set up the data (replication of mixtools example for comparability)
@@ -122,7 +122,7 @@ x.1 <- rmvnorm(40, c(0, 0))
 x.2 <- rmvnorm(60, c(3, 4))
 X.1 <- rbind(x.1, x.2)
 mu <- list(c(0, 0), c(3, 4))
-out <- mvnormalmixEM(X.1, arbvar = FALSE, mu = mu,epsilon = 1e-02)
+out <- mixtools::mvnormalmixEM(X.1, arbvar = FALSE, mu = mu,epsilon = 1e-02)
 
 # visualize and annotate
 plot <- plot_mm(out)
@@ -131,6 +131,17 @@ plot + patchwork::plot_annotation(title = "Bivariate Gaussian Mixture Model",
                                   subtitle = "Mixtools Object")
 ```
 ![Bivariate GMM (mixtools)](four.png)
+
+Further, for the bivariate cases (with `EMCluster` and `mixtools` objects), which include multiple plots `patchwork`ed together, users can "unattach" the plots comprising the full and final plot. As these are `patchwork`ed together, they may be pulled apart and customized accordingly, with simple indexing (e.g., for the scatterplot with two ellipses, call `plot[[1]]`, or for the two density plots, call `plot[[2]]`). Once stored, users can proceed with customization. For example, we can pull out the ellipsis plot from the `mixtools` version of the bivariate mixture model, and update the plot labels accordingly. 
+
+```{r}
+ellipsis_plot <- plot[[1]] + 
+  ggplot2::labs(title = "Here is a sample title",
+                x = "X1 Feature",
+                y = "X2 Feature")
+ellipsis_plot
+```
+![Ellipsis-Only Plot from the Bivariate GMM (mixtools)](ellipsis.png)
 
 
 Finally, here is a mixture of Gammas
