@@ -95,7 +95,7 @@ plot_mm(out) +
 ![Mixture of Regressions](two.png)
 
 
-Next is a bivariate Gaussian mixture model (via EMCluster)
+Next is a bivariate Gaussian mixture model (via EMCluster). Note, you have a few options here. If you simply plot via `plot_mm()` without storing the plot as an object, each ellipsis for each found cluster/mixture will plot as individual plots, followed by the final and *full* plot. On the other hand, by storing your plot as in the example below (e.g., `plot <- plot_mm(model, data = x)`), then calling the saved `plot` object will render only the final and *full* plot, which can be annotated accordingly via `patchwork`.
 
 ```{r}
 library(EMCluster)
