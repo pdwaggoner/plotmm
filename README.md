@@ -23,15 +23,15 @@ In collaboration with [Fong Chan](https://github.com/tinyheero) (Achilles Therap
 
 The package has five functions: 
 
-1. `plot_mm()`: The main function of the package, `plot_mm` allows the user to simply input the name of the fit mixture model, as well as an optional argument to pass the number of components `k` that were used in the original fit. *Note*: the function will automatically detect the number of components if `k` is not supplied. The result is a tidy ggplot of the density of the data with overlaid mixture weight component curves. Importantly, as the grammar of graphics is the basis of visualization in this package, all other tidyverse-friendly customization options work with any of the `plotmm`'s functions (e.g., customizing with `ggplot2`'s functions like `labs()` or `theme_*()`; or `patchwork`'s `plot_annotation()`). There are examples of these and others below.  
+1. `plot_mm()`: The main function of the package, `plot_mm` allows the user to simply input the name of the fit mixture model object, as well as an optional argument to pass the number of components `k` that were used in the original fit. *Note*: the function will automatically detect the number of components if `k` is not supplied. The result is a tidy `ggplot()` of the density of the data with overlaid mixture weight component curves (or ellipses in the 2-D , bivariate cases). Importantly, as the grammar of graphics is the basis of visualization in this package, most other tidyverse packages and functions work with any of the `plotmm`'s functions (e.g., customizing with `ggplot2`'s `labs()` or `theme_*()`; or with `patchwork`'s `plot_annotation()`).
 
-2. `plot_cut_point()`: Mixture models are often used to derive cut points of separation between groups in feature space. `plot_cut_point()` plots the data density with the overlaid cut point (point of greatest separation between component class means) from the fit mixture model. 
+2. `plot_cut_point()`: Mixture models are also used to derive cut points of separation between groups in feature space. `plot_cut_point()` plots the data density with the overlaid cut point (point of greatest separation between component class means) from the fit mixture model. This function also allows for returning the cut point calculation with no plot if so desired (i.e., `(... plot = FALSE)`).
 
-3. `plot_mix_comps()`: A helper function allowing for expanded customization of mixture model plots. The function superimposes the shape of the components over a `ggplot2` object. This function is also used to render all plots in the main `plot_mm()` function.
+3. `plot_mix_comps()`: A helper function used internally in `plot_mm()`. Can be adapted for expanded customization of mixture model plots by allowing for superimposing of components' shape curves over a `ggplot()` of the raw data. 
 
 4. `plot_gmm()`: The original function upon which the package was expanded. It is included in `plotmm` for quicker access to a common mixture model form (univariate Gaussian), as well as to bridge between the original `plotGMM` package.
 
-5. `plot_mix_comps_normal()`: Similarly, this function is the original basis of `plot_mix_comps()`, but for Gaussian mixture models only. It is included in `plotmm` for bridging between the original `plotGMM` package.
+5. `plot_mix_comps_normal()`: Like `plot_mix_comps()`, this is a helper function serving as the basis of the expanded `plot_mix_comps()`, but for Gaussian mixture models only. It is included in `plotmm` for bridging between the original `plotGMM` package.
 
 The package supports several model objects (from 'mixtools', 'EMCluster', and 'flexmix'), as well as many mixture model specifications, including mixtures of: 
 
@@ -46,7 +46,7 @@ See the complementary R-Bloggers post [here](https://www.r-bloggers.com/tidy-vis
 
 ## Contribute
 
-We welcome PRs or any form of contribution to the `plotmm` package, as it's still very much in it's infancy. For example (thanks [@DominiqueMakowski](https://github.com/DominiqueMakowski) for the language ideas below):
+We welcome PRs or any form of contribution to the `plotmm` package, as it's still very much in it's infancy. For example (thanks to [@DominiqueMakowski](https://github.com/DominiqueMakowski) for the language ideas below):
 
 - Create or check existing <a href=https://github.com/pdwaggoner/plotmm/issues><img src="docs/src/assets/issue_bug.png" height="25"></a> issues to report, replicate, or debug.
 
