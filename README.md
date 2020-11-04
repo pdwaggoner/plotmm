@@ -189,28 +189,23 @@ plot_cut_point(mixmdl, plot = FALSE)
 ```
 
 
-### Build a custom `ggplot` of a mixture model with `plot_mix_comps()`
+### Build a custom `ggplot` of a mixture model with `plot_mix_comps_normal()`
 
 ```{r }
-library(plotGMM)
-library(magrittr)
-library(ggplot2)
-
-# Fit a univariate mixture model via mixtools
-set.seed(576)
 mixmdl <- mixtools::normalmixEM(faithful$waiting, k = 2)
 
-# Customize a plot with `plot_mix_comps()`
-data.frame(x = mixmdl$x) %>%
-ggplot() +
-geom_histogram(aes(x, ..density..), binwidth = 1, colour = "black",
-                 fill = "white") +
-   stat_function(geom = "line", fun = plot_mix_comps,
-                 args = list(mixmdl$mu[1], mixmdl$sigma[1], lam = mixmdl$lambda[1]),
-                 colour = "red", lwd = 1.5) +
-   stat_function(geom = "line", fun = plot_mix_comps,
-                 args = list(mixmdl$mu[2], mixmdl$sigma[2], lam = mixmdl$lambda[2]),
-                 colour = "blue", lwd = 1.5) +
-   ylab("Density")
+x <- mixmdl$x
+x <- data.frame(x)
+
+ggplot2::ggplot(data.frame(x)) +
+  ggplot2::geom_histogram(ggplot2::aes(x, ..density..), binwidth = 1, colour = "black", fill = "white") +
+  ggplot2::stat_function(geom = "line", fun = plotmm::plot_mix_comps_normal,
+                         args = list(mu = mixmdl$mu[1], sigma = mixmdl$sigma[1], lam = mixmdl$lambda[1]),
+                         colour = "red", lwd = 1) +
+  ggplot2::stat_function(geom = "line", fun = plotmm::plot_mix_comps_normal,
+                         args = list(mu = mixmdl$mu[2], sigma = mixmdl$sigma[2], lam = mixmdl$lambda[2]),
+                         colour = "blue", lwd = 1) +
+  ggplot2::ylab("Density") + 
+  ggplot2::theme_minimal()
 ```
 ![Custom Plot using `plot_mix_comps`](faithful.png)
