@@ -132,7 +132,7 @@ plot + patchwork::plot_annotation(title = "Bivariate Gaussian Mixture Model",
 ```
 ![Bivariate GMM (mixtools)](four.png)
 
-Further, for the bivariate cases (with `EMCluster` and `mixtools` objects), which include multiple plots `patchwork`ed together, users can "unattach" the plots comprising the full and final plot with simple indexing (e.g., for the scatterplot with two ellipses, call `plot[[1]]`, or for the two density plots, call `plot[[2]]`). Once stored, proceed with customization. For example, we can pull out the ellipsis plot from the `mixtools` version of the bivariate mixture model, and update the plot labels accordingly. 
+Further, for the bivariate cases (with `EMCluster` and `mixtools` objects), which include multiple plots `patchwork`ed together, users can "unattach" the plots comprising the full plot with simple indexing (e.g., for the scatterplot with two ellipses, call `plot[[1]]`, or for the two density plots, call `plot[[2]]`). Once stored, proceed with customization. For example, we can pull out the ellipsis plot from the `mixtools` version of the bivariate mixture model, and update the plot labels accordingly. 
 
 ```{r}
 ellipsis_plot <- plot[[1]] + 
@@ -144,7 +144,7 @@ ellipsis_plot
 ![Ellipsis-Only Plot from the Bivariate GMM (mixtools)](ellipsis.png)
 
 
-Finally, here is a mixture of Gammas
+Finally, here is a mixture of Gammas.
 
 ```{r}
 # set up the data (replication of mixtools example for comparability)
@@ -180,7 +180,7 @@ plot_cut_point(mixmdl, plot = TRUE, color = "grayscale") # produces plot
 ![Cut Point from Old Faithful GMM using `plot_cut_point()` (default grayscale)](eight.png)
 
 
-#### Or calculate the cut point value only by setting `plot = FALSE`
+#### Or calculate and return only the cut point *value* by setting `plot = FALSE`
 
 ```{r }
 plot_cut_point(mixmdl, plot = FALSE)
@@ -189,7 +189,7 @@ plot_cut_point(mixmdl, plot = FALSE)
 ```
 
 
-### Customize a ggplot object with `plot_mix_comps()`
+### Build a custom `ggplot` of a mixture model with `plot_mix_comps()`
 
 ```{r }
 library(plotGMM)
