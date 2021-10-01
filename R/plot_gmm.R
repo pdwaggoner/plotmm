@@ -36,7 +36,7 @@ plot_gmm <- function(m, k=NULL) {
   if (k <= 1){
     stop("Specified components must be at least length 2.")
   } else if (k >= 16){
-    stop("Are you really searching for 16 or more clusters? If so, open an issue ticket: `https://github.com/pdwaggoner/plotGMM/issues`\nand we will consider updating the package. If not, go back and make sure the GMM is properly specified.")
+    stop("Are you really searching for 16 or more clusters? If so, open an issue ticket: `https://github.com/pdwaggoner/plotmm/issues`\nand we will consider updating the package. If not, go back and make sure the GMM is properly specified.")
   }
 
   component_colors <-
