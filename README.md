@@ -14,7 +14,7 @@
 ---
 
 Package authors and contributors:
-  - [Philip D. Waggoner](https://github.com/pdwaggoner) (pkg maintainer), Edison Software & Columbia University
+  - [Philip D. Waggoner](https://github.com/pdwaggoner) (pkg maintainer), YouGov & Columbia University
   - [Fong Chun Chan](https://github.com/tinyheero), Achilles Therapeutics
   - [Lu Zhang](https://github.com/LuZhang0128), University of Chicago (formerly Emory)
 
