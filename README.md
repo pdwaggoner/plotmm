@@ -1,6 +1,6 @@
 # `plotmm` Tidy Tools for Visualizing Mixture Models
+[![lifecycle](https://img.shields.io/badge/lifecycle-stable-forestgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html)
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/plotmm)](http://cran.r-project.org/package=plotmm)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=plastic)](https://github.com/pdwaggoner/plotmm/pulls)
 [![Downloads](http://cranlogs.r-pkg.org/badges/grand-total/plotmm)](http://cranlogs.r-pkg.org/)
 [![Documentation](https://img.shields.io/badge/documentation-plotmm-orange.svg?colorB=E91E63)](https://www.r-pkg.org/pkg/plotmm)
 
