@@ -9,12 +9,14 @@
 #' @details Mixture models can be used to derive cut points separating clusters via soft assignment (See Benaglia et al. 2009 for more). \code{plot_cut_point()} plots data density with an overlaid cut point (the mean of the calculated \code{mu}) from \code{mixEM} objects via \code{mixtools}. Note, this function is in its infancy, and at present only works in the limited context of 2-component Gaussian mixture models with equal priors and equal variances. Development for more complex cases is in process.
 #'
 #' @examples
+#' \donttest{
 #' if(require(mixtools)){
 #' mixmdl <- mixtools::normalmixEM(faithful$waiting, k = 2)
 #' }
 #' plot_cut_point(mixmdl, plot = TRUE, color = "amerika") # returns plot, amerika
 #' plot_cut_point(mixmdl, plot = TRUE, color = "wesanderson") # returns plot, wesanderson
 #' plot_cut_point(mixmdl, plot = FALSE) # returns only the cut point value from the GMM
+#'}
 #'
 #' @references Benaglia, T., Chauveau, D., Hunter, D. and Young, D. 2009. mixtools: An R package for analyzing finite mixture models. Journal of Statistical Software, 32(6), pp.1-29.
 #' @references Ram, K., and Wickham, H. 2015. wesanderson: a Wes Anderson palette generator. R package version 0.3.
