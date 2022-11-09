@@ -6,7 +6,7 @@
 #' @param plot Logical for generating the plot. If FALSE, only the cut point value from the GMM is returned. If TRUE, histogram with the overlaid cut point is returned. Default is set to TRUE.
 #' @param color A vector of color options including "amerika" (from \code{amerika} package), "wesanderson" (from \code{wesanderson} package), and "grayscale", which is the default option.
 #'
-#' @details Mixture models can be used to derive cut points separating clusters via soft assignment (See Benaglia et al. 2009 for more). \code{plot_cut_point()} plots data density with an overlaid cut point (the mean of the calculated \code{mu}) from \code{mixEM} objects via \code{mixtools}.
+#' @details Mixture models can be used to derive cut points separating clusters via soft assignment (See Benaglia et al. 2009 for more). \code{plot_cut_point()} plots data density with an overlaid cut point (the mean of the calculated \code{mu}) from \code{mixEM} objects via \code{mixtools}. Note, this function is in its infancy, and at present only works in the limited context of 2-component Gaussian mixture models with equal priors and equal variances. Development for more complex cases is in process.
 #'
 #' @examples
 #' if(require(mixtools)){
