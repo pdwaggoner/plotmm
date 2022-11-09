@@ -44,6 +44,7 @@ library(plotmm)
 
 To get started, read the ["Getting Started" vignette](https://github.com/pdwaggoner/plotmm/tree/master/vignettes), which includes a few basic examples. 
 
+
 ## Contribute
 
 Anyone is welcome to contribute to the package. Before collaborating, please take a look at and abide by the [contributor code of conduct](https://github.com/pdwaggoner/plotmm/blob/master/CODE_OF_CONDUCT.md). Here's a sampling of how to contribute:
