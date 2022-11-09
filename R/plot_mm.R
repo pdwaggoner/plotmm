@@ -344,7 +344,7 @@ plot_mm <- function(m, k = NULL, data = NULL) {
 
     # if multivariate case
     if (ncol(data)!=2){
-      stop("Not yet compatible with multivariate `emret` objects where ncol(data) >= 3 (i.e., 3+ dimensions). \n
+      stop("Not compatible with multivariate `emret` objects where ncol(data) >= 3 yet. \n
            Development is in process.")
     }
 
@@ -477,4 +477,3 @@ plot_mm <- function(m, k = NULL, data = NULL) {
   out_plot
 
 }
-

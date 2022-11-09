@@ -38,7 +38,7 @@ plot_gmm <- function(m, k=NULL) {
   if (k <= 1){
     stop("Specified components must be at least length 2.")
   } else if (k >= 16){
-    stop("Are you really searching for 16 or more clusters? If so, open an issue ticket: `https://github.com/pdwaggoner/plotmm/issues`\nand we will consider updating the package. If not, go back and make sure the GMM is properly specified.")
+    stop("Are you really searching for 16 or more clusters? If so, open an issue ticket: `https://github.com/pdwaggoner/plotGMM/issues`\nand we will consider updating the package. If not, go back and make sure the GMM is properly specified.")
   }
 
   component_colors <-
@@ -70,7 +70,7 @@ plot_gmm <- function(m, k=NULL) {
   for (i in seq(1, k)) {
     out_plot <-
       out_plot +
-      ggplot2::stat_function(geom = "line", fun = plot_mix_comps,
+      ggplot2::stat_function(geom = "line", fun = plot_mix_comps_normal,
                            args = list(m$mu[i], m$sigma[i], lam = m$lambda[i]),
                            colour = component_colors[i], lwd = 1) +
       ggplot2::ylab("Density") +

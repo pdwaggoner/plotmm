@@ -64,4 +64,3 @@ plot_mix_comps <- function(x, mu = NULL, sigma = NULL, lam = 1, beta0 = NULL,
     lam*stats::rpois(x, exp(beta0 + beta1))
   }
 }
-

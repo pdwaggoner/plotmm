@@ -41,6 +41,7 @@ Allows for plotting mixture components conditioned on a superimposed function me
 Allows for component curves to be superimposed over a mixture model plot
 }
 \examples{
+\donttest{
 if(require(mixtools)){
 mixmdl <- mixtools::normalmixEM(faithful$waiting, k = 2)
 }
@@ -54,5 +55,6 @@ ggplot2::ggplot(data.frame(x)) +
   ggplot2::stat_function(geom = "line", fun = plot_mix_comps,
                 args = list(mixmdl$mu[2], mixmdl$sigma[2], lam = mixmdl$lambda[2]),
                colour = "blue")
+}
 
 }

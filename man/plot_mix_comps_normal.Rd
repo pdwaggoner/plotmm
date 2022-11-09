@@ -22,6 +22,7 @@ Plots a mixture component conditioned on a superimposed function
 Allows for specifying a custom function to be superimposed when plotting a mixture component assuming a normal distribution. This is the original function for the package, which is also included in the updated \code{plot_mix_comps()} function.
 }
 \examples{
+\donttest{
 if(require(mixtools)){
 mixmdl <- mixtools::normalmixEM(faithful$waiting, k = 2)
 }
@@ -35,5 +36,6 @@ ggplot2::ggplot(data.frame(x)) +
   ggplot2::stat_function(geom = "line", fun = plot_mix_comps_normal,
                 args = list(mixmdl$mu[2], mixmdl$sigma[2], lam = mixmdl$lambda[2]),
                colour = "blue")
+}
 
 }
