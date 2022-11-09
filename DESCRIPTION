@@ -22,6 +22,7 @@ Suggests:
     graphics,
     dplyr,
     patchwork,
+    magrittr,
     knitr,
     rmarkdown
 License: MIT + file LICENSE
