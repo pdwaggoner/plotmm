@@ -24,6 +24,8 @@ In collaboration with [Fong Chan](https://github.com/tinyheero) (Achilles Therap
 
 To get started, read the "Getting Started" vignette, which includes a few basic examples. 
 
+## Install
+
 Load the latest version:
 
 ```{r}
