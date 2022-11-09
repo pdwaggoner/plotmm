@@ -22,8 +22,6 @@ Package authors and contributors:
 
 In collaboration with [Fong Chan](https://github.com/tinyheero) (Achilles Therapeutics) and [Lu Zhang](https://github.com/LuZhang0128) (University of Chicago), we have developed `plotmm` for tidy visualization of mixture models. This package is a substantial update to the [`plotGMM` package](https://CRAN.R-project.org/package=plotGMM).
 
-To get started, read the "Getting Started" vignette, which includes a few basic examples. 
-
 ## Install
 
 Load the latest version:
@@ -41,6 +39,10 @@ install.packages("plotmm")
 
 library(plotmm)
 ```
+
+## Getting Started
+
+To get started, read the ["Getting Started" vignette](https://github.com/pdwaggoner/plotmm/tree/master/vignettes), which includes a few basic examples. 
 
 ## Contribute
 
