@@ -7,17 +7,14 @@ Authors@R: c(person("Philip", "Waggoner", role = c("aut", "cre"), email = "phili
              person("Fong", "Chan", role = c("aut", "ctb")),
              person("Lu", "Zhang", role = c("aut", "ctb")))
 Maintainer: Philip Waggoner <philip.waggoner@gmail.com>
-Description: The main function, plot_mm(), is used for plotting output from mixture models, 
-    including both densities and overlaying mixture weight component curves from the fit models. In line with the
-    tidyverse, the package also includes the plot_cut_point() function to visualize the cutpoint (mu) from the model
-    over a histogram of the data density with several color options. Finally, the package includes the plot_mix_comps() 
-    helper function, which is used for both added customization as well as in the plot_mm() function. 
-    Supported model objects include: 'mixtools', 'EMCluster', and 'flexmix', with more from each forthcoming. 
+Description: The main function, plot_mm(), is used for (gg)plotting output from mixture models, 
+    including both densities and overlaying mixture weight component curves from the fit models in line with the
+    tidy principles. The package includes several additional functions for added plot customization. 
+    Supported model objects include: 'mixtools', 'EMCluster', and 'flexmix', with more from each in active dev. 
     Supported mixture model specifications include mixtures of univariate Gaussians, multivariate Gaussians, Gammas, 
     logistic regressions, linear regressions, and Poisson regressions.
 Imports: methods, wesanderson, amerika, ggplot2
-Suggests:
-    mixtools, EMCluster, flexmix, testthat, graphics, dplyr, patchwork
+Suggests: mixtools, EMCluster, flexmix, testthat, graphics, dplyr, patchwork
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
