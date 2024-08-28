@@ -8,7 +8,7 @@
 #### [`plotGMM`](https://CRAN.R-project.org/package=plotGMM):
 [![lifecycle](https://img.shields.io/badge/lifecycle-retired-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html)
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/plotGMM)](http://cran.r-project.org/package=plotGMM)
-[![Downloads](http://cranlogs.r-pkg.org/badges/grand-total/plotGMM)](http://cranlogs.r-pkg.org/)
+[![Downloads](https://cranlogs.r-pkg.org/badges/grand-total/plotGMM)](https://cran.r-project.org/package=plotGMM)
 [![Documentation](https://img.shields.io/badge/documentation-plotGMM-orange.svg?colorB=E91E63)](https://www.r-pkg.org/pkg/plotGMM)
 
 ---
