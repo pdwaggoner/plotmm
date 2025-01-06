@@ -10,8 +10,12 @@ vignette: >
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>"
+  comment = "#>",
+  eval = FALSE,
+  echo = TRUE
 )
+
+options(repos = c(CRAN = "https://cloud.r-project.org"))
 ```
 
 This vignette offers a few basic examples to help users get started with `plotmm`.
@@ -37,9 +41,29 @@ The package supports several model objects (from 'mixtools', 'EMCluster', and 'f
 5. Linear regressions
 6. Poisson regressions
 
-First, load the stable version from CRAN.
+First, load the stable version from CRAN, along with some additional packages.
 
 ```{r setup}
+if (!requireNamespace("EMCluster", quietly = TRUE)) {
+  install.packages("EMCluster")
+}
+
+if (!requireNamespace("flexmix", quietly = TRUE)) {
+  install.packages("flexmix")
+}
+
+if (!requireNamespace("mixtools", quietly = TRUE)) {
+  install.packages("mixtools")
+}
+
+if (!requireNamespace("ggplot2", quietly = TRUE)) {
+  install.packages("ggplot2")
+}
+
+if (!requireNamespace("plotmm", quietly = TRUE)) {
+  install.packages("plotmm")
+}
+
 library(plotmm)
 ```
 

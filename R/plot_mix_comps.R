@@ -21,7 +21,7 @@
 #' @details Allows for component curves to be superimposed over a mixture model plot
 #'
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' if(require(mixtools)){
 #' mixmdl <- mixtools::normalmixEM(faithful$waiting, k = 2)
 #' }

@@ -9,7 +9,7 @@
 #' Note: \code{plot_gmm} requires a \code{mixtools} object to be supplied. Users must enter the same component value, \code{k}, in the \code{plot_gmm} function, as that which was specified in the original GMM specification (also \code{k} in \code{mixtools}).
 #'
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' if(require(mixtools)){
 #' mixmdl <- mixtools::normalmixEM(faithful$waiting, k = 2)
 #' }

@@ -1,7 +1,7 @@
 Package: plotmm
 Type: Package
 Title: Tidy Tools for Visualizing Mixture Models
-Version: 0.1.1
+Version: 0.1.2
 BugReports: https://github.com/pdwaggoner/plotmm/issues
 Authors@R: c(person("Philip", "Waggoner", role = c("aut", "cre"), email = "philip.waggoner@gmail.com"),
              person("Fong", "Chan", role = c("aut", "ctb")),
@@ -13,20 +13,18 @@ Description: The main function, plot_mm(), is used for (gg)plotting output from 
     Supported model objects include: 'mixtools', 'EMCluster', and 'flexmix', with more from each in active dev. 
     Supported mixture model specifications include mixtures of univariate Gaussians, multivariate Gaussians, Gammas, 
     logistic regressions, linear regressions, and Poisson regressions.
-Imports: methods, wesanderson, amerika, ggplot2
+Imports: methods, wesanderson, amerika, ggplot2, mixtools, EMCluster, flexmix
 Suggests: 
-    mixtools,
-    EMCluster,
-    flexmix,
     testthat,
     graphics,
     dplyr,
     patchwork,
+    survival,
     magrittr,
     knitr,
     rmarkdown
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.1.1
+RoxygenNote: 7.3.1
 VignetteBuilder: knitr

@@ -20,7 +20,7 @@ Returns a plot of the data density (histogram) with an overlaid cut point genera
 Mixture models can be used to derive cut points separating clusters via soft assignment (See Benaglia et al. 2009 for more). \code{plot_cut_point()} plots data density with an overlaid cut point (the mean of the calculated \code{mu}) from \code{mixEM} objects via \code{mixtools}. Note, this function is in its infancy, and at present only works in the limited context of 2-component Gaussian mixture models with equal priors and equal variances. Development for more complex cases is in process.
 }
 \examples{
-\donttest{
+\dontrun{
 if(require(mixtools)){
 mixmdl <- mixtools::normalmixEM(faithful$waiting, k = 2)
 }

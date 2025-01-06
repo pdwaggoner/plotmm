@@ -9,7 +9,7 @@
 #' @details This is the core function in the package, returning a \code{ggplot} object for a fit mixture model. The plot includes the data density with overlaid mixture components.
 #'
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' if(require(mixtools)){
 #' mixmdl1 <- mixtools::normalmixEM(faithful$waiting, k = 2)
 #' }

@@ -10,7 +10,7 @@
 #' @details Allows for specifying a custom function to be superimposed when plotting a mixture component assuming a normal distribution. This is the original function for the package, which is also included in the updated \code{plot_mix_comps()} function.
 #'
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' if(require(mixtools)){
 #' mixmdl <- mixtools::normalmixEM(faithful$waiting, k = 2)
 #' }

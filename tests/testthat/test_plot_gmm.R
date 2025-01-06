@@ -1,4 +1,26 @@
+options(repos = c(CRAN = "https://cloud.r-project.org"))
+
 context("plot_gmm")
+
+if (!requireNamespace("EMCluster", quietly = TRUE)) {
+  install.packages("EMCluster")
+}
+
+if (!requireNamespace("flexmix", quietly = TRUE)) {
+  install.packages("flexmix")
+}
+
+if (!requireNamespace("mixtools", quietly = TRUE)) {
+  install.packages("mixtools")
+}
+
+if (!requireNamespace("ggplot2", quietly = TRUE)) {
+  install.packages("ggplot2")
+}
+
+if (!requireNamespace("plotmm", quietly = TRUE)) {
+  install.packages("plotmm")
+}
 
 set.seed(235)
 
